@@ -48,4 +48,17 @@ public class UserRegistration {
             return false;
         }
     }
+
+    public boolean addLastName(String lastName) {
+        boolean isLastName = Pattern.matches("^[A-Z][a-z]{2,}$", lastName);
+        if (isLastName) {
+            userDetails.setLastName(lastName);
+            return true;
+        } else {
+            System.out.println("Please check Last Name");
+            return false;
+        }
+    }
+
+
 }
