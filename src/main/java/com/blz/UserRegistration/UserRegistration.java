@@ -60,5 +60,14 @@ public class UserRegistration {
         }
     }
 
-
+    public boolean addEmail(String email) {
+        boolean isMailId = Pattern.matches("^([a-z0-9]+([-$%&+.]?[0-9a-z]+))[@][a-z0-9]+[.][a-z]{3,}([.][a-z]{2,})?$", email);
+        if (isMailId) {
+            userDetails.setEmail(email);
+            return true;
+        } else {
+            System.out.println("Please check email id");
+            return false;
+        }
+    }
 }
